@@ -85,7 +85,8 @@ def calc_bleu(predictions, tokenizer, multi_ref, **kwargs):
 def calc_sbert(predictions, batch_size, multi_ref, **kwargs):
     from sentence_transformers import SentenceTransformer, util
     import torch
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    # device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    device = 'cpu'
     model = SentenceTransformer(
             model_name_or_path='all-MiniLM-L6-v2',
             device=device)

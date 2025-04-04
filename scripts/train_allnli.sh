@@ -7,7 +7,7 @@ mkdir -p $output_dir
 
 python train.py \
     --per_device_train_batch_size 4 \
-    --num_train_epochs 3 \
+    --num_train_epochs 1 \
     --do_train \
     --do_eval \
     --model_name_or_path facebook/bart-base \
